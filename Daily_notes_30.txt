@@ -1,0 +1,110 @@
+--Q.What is data?
+--Collection of meaniful information.
+--OR
+--Collection record information.
+
+--Q. What is database(DBMS)?
+--it is collection of data in file format.
+--ex:Excel,word file,text file, notepad , notepad++ etc.
+
+--it stores less amount of data 
+--no relationship between two files or tables 
+
+
+--Q.What is RDBMS(Relatinal data base management system)?
+--it is collection of table related information.
+--it stores huge amount of data and to extract the data we have a simple language i.e. SQL
+--There is relation between two or more tables.
+
+--Q.what is table ?
+--it is collection of rows and columns.
+
+--SQL is not a case sensitive language
+--The meaning 'A' is always same 'a'
+--for ex: 'AMAR' it has same meaning of 'amar'
+
+--Q.how to execute SQL statements?
+--1.By using Execute tab form top 
+--2.By pressing F5 key from key board
+
+--Data types 
+--Type of data/value of an object can hold is known as data type.
+--A].Numeric data type 
+
+--1.BIT
+--it stores value 0 or 1
+
+--2.TINYINT 
+--It will store the value ranging from 0 to 255
+
+--3.SMALLINT
+--it will store value ranging -32768 to 32767
+
+--4.Decimal
+--an exact fixed point number 
+
+--5. INT
+--it stores an integer value i.e. ranging from -2147483648 to 2147483647
+
+--B].Approximate numeric data type 
+--1.Float 
+--it will store floating point number range is -1.8E to 308 to 1.8E to 308
+--for Ex: 8.2345, 0.9876 etc
+--2.Real
+--it will also store an floating point numbers -3.40E to 38 to 3.40E to 38
+
+--C].String or charecter data type
+--1.char - 0-9,a-z,A-Z and Special symbol it will store data as 1 bit
+--Static memory allocation and it is having size of 8000 chars
+--for ex: char(20) -- AMAR - 4 char reaming 16 blocks of memory waisted because it has been fixed
+
+
+--2.varchar -  - 0-9,a-z,A-Z and Special symbol
+--It is dynamic memory allocation and it will store data as 1 bit
+--for ex: varchar(20) -- AMAR - 4 char reaming 16 blocks of memory it will releasse has been fixed
+declare @val1 varchar(8000)='AMARPatil';
+print @val1
+print datalength(@val1)
+print len(@val1)
+
+
+--3.nchar
+--It is static memory allocation and it can store 4000 charecters (1 char it will occupy 2bytes)
+declare @value nchar(4000) = 'AMAR'
+print @value
+print datalength(@value)
+print len(@value)
+
+--4.nvarchar
+--It is dynamic memory allocation and it can store 4000 charecters (1 char it will occupy 2bytes).
+
+declare @value1 nvarchar(4000) = 'AMAR'
+print @value1
+print datalength(@value1)
+print len(@value1)
+
+--D].data and Time data type 
+--1.date 
+--It will allow you to insert the date in mulptiple formats 
+--For Ex: YYYY/MM/DD,DD/MM/YYYY,YYYY/DD/MM etc 
+select GETDATE()
+
+--2.time 
+--it will allow you to insert the time in below format
+--HH:MM:SS:MS
+
+
+--3.Datetime
+--It will allow you to insert date and time together.
+--YYYY/MM/DD HH:MM AM/PM
+
+declare @datetime datetime  = getdate()
+print @datetime
+
+--SQL statements
+--There are four types of SQL statements 
+--1.DDL(Data Defination lamguage) -- Table level operation.
+--2.DML(Data Manipulation Language) --Data stored inside the table
+--3.DCL(Data Control Language)
+--4.TCL(Transction Control Language)
+
